@@ -37,22 +37,24 @@ MySQL-based persistent data
 ## Folder Structure
 
 offline-transfer/
-├── src/
-│ ├── main/
-│ │ ├── java/
-│ │ │ └── com.example.offline_transfer/
-│ │ │ ├── controller/
-│ │ │ ├── model/
-│ │ │ ├── repository/
-│ │ │ ├── service/
-│ │ │ └── OfflineTransferAppApplication.java
-│ │ └── resources/
-│ │ ├── templates/
-│ │ │ └── dashboard.html
-│ │ ├── static/
-│ │ │ └── css/
-│ │ │ └── styles.css
-│ │ ├── application.properties
-│ └── test/
 ├── pom.xml
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── com/
+│   │   │       └── example/
+│   │   │           └── offline_transfer/
+│   │   │               ├── controller/
+│   │   │               ├── model/
+│   │   │               ├── repository/
+│   │   │               ├── service/
+│   │   │               └── OfflineTransferAppApplication.java
+│   │   └── resources/
+│   │       ├── application.properties
+│   │       ├── static/
+│   │       │   └── css/
+│   │       │       └── styles.css
+│   │       └── templates/
+│   │           └── dashboard.html
+│   └── test/
 
