@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Money Transfer Dashboard</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+<div class="container">
+    <h2>Money Transfer Dashboard</h2>
+
+    <!-- Toggle Switch -->
+    <div class="toggle-container">
+        <form action="/toggle" method="post" id="toggleForm">
+            <label class="switch">
+                <input type="checkbox" name="mode"
+                       onchange="document.getElementById('toggleForm').submit();"
+                       th:checked="${mode == 'ONLINE'}">
+                <span class="slider"></span>
+            </label>
+            <span class="mode-status" th:text="${mode}"></span>
+        </form>
+    </div>
+
+    <!-- Balances -->
+    <div class="account-info">
+        <div>
+            <p>Savings Balance</p>
+            ₹<span th:text="${account.savingsBalance}"></span>
+        </div>
+        <div>
+            <p>Ledger Balance</p>
+            ₹<span th:text="${account.ledgerBalance}"></span>
+        </div>
+    </div>
+
+    <!-- Send Money -->
+    <h3>Send Money</h3>
+    <form action="/send" method="post">
+        <input type="number" name="amount" placeholder="Amount" required>
+        <input type="number" name="receiverId" placeholder="Receiver ID" required>
+        <input type="password" name="pin" placeholder="PIN" required>
+        <button type="submit">Send</button>
+    </form>
+</div>
+</body>
+</html>
